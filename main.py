@@ -9,7 +9,6 @@ from timeit import default_timer as timer
 
 COUNTDOWN_TIME = 1
 FONT_NAME = "Courier"
-count_sec = None
 
 text_paras = [
     "Closed captions were created for deaf or hard of hearing individuals to assist in comprehension. They can also"
@@ -57,8 +56,6 @@ def start_timer(event):
 
 
 def count_down(count):
-    global count_sec
-
     count_min = math.floor(count / 60)
     count_sec = count % 60
     if count_sec < 10:
